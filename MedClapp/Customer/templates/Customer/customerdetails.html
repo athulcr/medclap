@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+{% block body_block %}
+<body>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+        <div class="col-4"></div>
+        <img src="{{form.image.url}}"class="card-img-top">
+        <div>
+            <br>
+                    <h4>Name : {{form.name}}</h4>
+                    <hr>
+                    <h4>Age : {{form.age}}</h4>
+                    <hr>
+                    <h4>Height : {{form.bloodgroup}}</h4>
+                    <hr>
+                    <h4>Gender : {{form.gender}}</h4>
+                    <hr>
+                    <h4>Height : {{form.height}}</h4>
+                    <hr>
+                    <h4>Weight : {{form.weight}}</h4>
+                    <hr>
+                    <h4>Address : {{form.address}}</h4>
+                    <hr>
+
+</div>
+
+{% endblock %}

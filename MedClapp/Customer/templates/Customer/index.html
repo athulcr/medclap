@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+{% block body_block %}
+<div class="container">
+     <h1 class="h3 mb-0 text-gray-800"> Index </h1> 
+    <br>
+    {%csrf_token%}
+    <div class="row">
+
+        {% for detail in forms %}
+        <div class="col-lg-4">
+            <div class="card" style="width: 11rem;">
+                <img class="card-img-top" src="{{detail.image.url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title">{{detail.name}}</h6>
+                    <h6 class="card-title">{{detail.age}}</h6>
+                    <h6 class="card-title">{{detail.bloodgroup}}</h6>
+                    <a href="{% url 'customerdetails' detail.id %}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

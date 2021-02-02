@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<br>
+<body>
+<h1 class="h3 mb-0 text-gray-800" align='center'>Signup</h1>
+<br>
+<div class='container'>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+                <form method="post" autocomplete="off" >
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <input type="submit" value="Register" class="btn btn-outline-primary">
+                    <a href="{% url 'loginpagee' %}">Login</a>
+        </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+</div>
+</body>
+</html>

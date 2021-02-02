@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+
+{% block body_block %}
+<div class="jumbotron">
+<form method="post">
+    {%csrf_token%}
+    {{request.user.id}}
+    {{form.as_p}}
+    <input type="submit" value="Create">
+
+<div>
+        <table>
+        <tr>
+             <td><a href="{%url 'Viewstatus' request.user.id%}">View my status</a></td>
+        </tr>
+
+    </table>
+
+</div>
+    </form>
+</div>
+{% endblock %}

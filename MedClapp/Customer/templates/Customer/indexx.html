@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+
+{% block body_block %}
+<div class="container">
+    <div class="Jumpotron">
+        <p>WELCOME {{user}}</p>
+        <table>
+            <tr>
+                <td>Request</td>
+            </tr>
+            <tr>
+                <td><a href="{%url 'Userhome' user.id%}">Apply</a></td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+
+</div>
+{% endblock %}

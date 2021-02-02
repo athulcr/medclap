@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+{% block body_block %}
+
+<div class="container">
+    <h1 class="h3 mb-0 text-gray-800" align='center'>Add Profile</h1>
+    <br>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="create" class="btn btn-outline-primary" >
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+<br>
+ {% endblock %}

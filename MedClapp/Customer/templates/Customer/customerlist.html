@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+{% block body_block %}
+{%csrf_token%}
+<div class="container">
+        <h1 class="h3 mb-0 text-gray-800" align='center'>List of Customers</h1>
+        <br>
+        <table class="table">
+            <tr>
+                <td ><b>Customer</b></td>
+                <td></td>
+                <td><b>Options</b></td>
+            </tr>
+            {% for val in forms %}
+            <tr>
+                <td><b>{{val.name}}</b></td>
+                <td><a href="{% url 'customeredit' val.id %}" class="btn btn-outline-primary">Edit</a></td>
+                <td></td>
+                <td><a href="{% url 'customerdelete' val.id %}" class="btn btn-outline-primary">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+<br>
+{% endblock %}

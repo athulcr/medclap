@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "Customer/basee.html" %}
+
+{% block body_block %}
+<h1 class="h3 mb-0 text-gray-800" align='center'>Edit Customer</h1>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <form method="post" enctype="multipart/form-data" autocomplete="off">
+                {%csrf_token%}
+                {{form.as_p}}
+                <input type="submit" value="Update" class="btn btn-outline-primary">
+            </form>
+            <br>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{% endblock %}
